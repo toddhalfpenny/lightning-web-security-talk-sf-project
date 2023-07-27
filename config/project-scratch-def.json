@@ -1,7 +1,8 @@
 {
-  "orgName": "todd company",
+  "orgName": "lws-talk",
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi"],
+  "hasSampleData": false,
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

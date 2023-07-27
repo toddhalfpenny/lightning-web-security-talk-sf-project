@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Global Object Two" icon-name="standard:system_and_global_variable">
+        <div slot="actions">
+		<lightning-button label="Get Clipboard Contents" class="slds-m-left_xx-small" onclick={getClipboardContents}></lightning-button>
+		</div>
+		<div class="slds-var-m-around_medium">
+			<template lwc:if={error}>
+				<ltngmu-lwc-messaging-utility
+					message-type="alert"
+					show-message="true"
+					message-body="Unable to paste clipboard contents here!"
+					message-variant="warning"
+					show-icon="true"
+					icon-name="utility:warning"
+					allow-close="true"
+					></ltngmu-lwc-messaging-utility>
+			</template>
+			<p>Clipboard content;</p>
+			<p><em>{clipboardContents}</em></p>
+		</div>
+	</lightning-card>
+</template>

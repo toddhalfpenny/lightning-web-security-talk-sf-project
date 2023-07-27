@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Global Object One" icon-name="standard:system_and_global_variable">
+		<div slot="actions">
+			<lightning-button label="Start Video" class="slds-m-left_xx-small" onclick={initCamera}></lightning-button>
+			<lightning-button label="Stop Video" class="slds-m-left_xx-small" onclick={stopCamera}></lightning-button>
+			<lightning-button label="Capture Image" class="slds-m-left_xx-small" onclick={captureImage}></lightning-button>
+		</div>
+		<div class="slds-grid slds-gutters">
+			<div class="slds-col slds-size_1-of-2">
+				<video class="videoElement" autoplay></video>
+				<canvas class="slds-hide canvas"></canvas>
+			</div>
+			<div class="slds-col slds-size_1-of-2">
+				<img src="" class="slds-hide imageElement" alt="captured image"/>
+			</div>
+		</div>
+	</lightning-card>
+</template>

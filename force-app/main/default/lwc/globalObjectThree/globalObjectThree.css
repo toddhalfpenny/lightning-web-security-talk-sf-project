@@ -1,0 +1,50 @@
+.phoneScreenshot {
+    display: block;
+    margin: 2em auto;
+    max-width: 50%;
+}
+
+/* POPPER */
+.tooltip {
+    background-color: #faaf3a;
+    border-radius: 4px;
+    color: black;
+    font-size: 13px;
+    max-width: 10em;
+    padding: 5px 10px;
+    z-index: 1;
+  }
+
+.arrow,
+.arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+    }
+
+.arrow {
+    visibility: hidden;
+}
+
+.arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+}
+
+  .tooltip[data-popper-placement^='top'] > .arrow {
+    bottom: -4px;
+  }
+  
+  .tooltip[data-popper-placement^='bottom'] > .arrow {
+    top: -4px;
+  }
+  
+  .tooltip[data-popper-placement^='left'] > .arrow {
+    right: -4px;
+  }
+  
+  .tooltip[data-popper-placement^='right'] > .arrow {
+    left: -4px;
+  }
