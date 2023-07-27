@@ -1,6 +1,6 @@
-# Salesforce DX Project: Next Steps
+# Lightning Web Security Talk Salesforce Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A Salesforce project to demonstrate LWS uses
 
 ## How Do You Plan to Deploy Your Changes?
 
