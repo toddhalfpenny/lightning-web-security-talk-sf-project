@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="Primary Contact"  icon-name="standard:contact">
+        <div class="slds-card__body slds-card__body_inner">
+            <lightning-combobox
+                name="contacts"
+                label="Contacts"
+                placeholder="Choose Contact"
+                value={primaryContactId}
+                onchange={handlePrimaryContactChange}
+                options={primaryContactOptions}>
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>
