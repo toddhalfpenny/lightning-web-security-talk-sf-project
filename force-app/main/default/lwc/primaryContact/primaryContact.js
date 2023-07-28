@@ -30,7 +30,7 @@ export default class PrimaryContact extends LightningElement {
         try  {
             this.refreshHandlerID = registerRefreshHandler(this, this.refreshHandler);
         } catch(error) {
-            console.error(LOG_TAG, "registerRefreshHandler", error);
+            console.warn(LOG_TAG, "registerRefreshHandler", error);
         }
     }
     disconnectedCallback() {
@@ -68,6 +68,7 @@ export default class PrimaryContact extends LightningElement {
      } 
 
      refreshHandler() {
+        console.log(LOG_TAG, 'refreshHandler');
         return new Promise(async (resolve, reject) => {
             refreshApex(this.wiredContactsResult)
             .then(() => {

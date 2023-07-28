@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Add Contact" icon-name="standard:record">
+        <div class="slds-card__body slds-card__body_inner">
+            <lightning-input   
+                label="First Name"
+                class="slds-var-a-bottom_x-small"
+                value={firstName}
+                onchange={handleFirstNameChange}>
+            </lightning-input>
+            <lightning-input   
+                label="Last Name"
+                class="slds-var-a-bottom_x-small"
+                value={lastName}
+                onchange={handleLastNameChange}>
+            </lightning-input>
+            <lightning-checkbox-group name="Primary Contact"
+                label="Primary Contact"
+                options={primaryContactOptions}
+                value={primaryContactvalue}
+                onchange={handleChangeIsPrimaryContact}>
+            </lightning-checkbox-group>
+        </div>
+        <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
