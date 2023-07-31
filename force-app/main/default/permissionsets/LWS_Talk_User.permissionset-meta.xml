@@ -5,6 +5,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <description>User permissions for LWS Talk App</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Primary_Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>LWS Talk User</label>
 </PermissionSet>
