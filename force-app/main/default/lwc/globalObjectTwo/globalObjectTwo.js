@@ -9,6 +9,7 @@ export default class GlobalObjectTwo extends LightningElement {
     }
 
     async getClipboardContents() {
+        console.log('navigator.permissions', navigator.permissions);
         await navigator.clipboard
         .readText()
         .then(

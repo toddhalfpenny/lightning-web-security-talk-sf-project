@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Global Object Four" icon-name="standard:system_and_global_variable">
+        <div slot="actions">
+            <lightning-button label="Generate QR code" class="slds-m-left_xx-small" onclick={generateQrCode}></lightning-button>
+            <lightning-button label="Copy QR code to clipboard" class="slds-m-left_xx-small" onclick={copyQrCode}></lightning-button>
+            </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" value={url} label="Enter a URL"  onchange={handleUrlChange} ></lightning-input>
+        </div>
+		<div class="slds-var-m-around_medium">
+            <div id="qrcode" lwc:ref="qrcodeDiv" lwc:dom="manual"></div>
+        </div>
+    </lightning-card>
+</template>
