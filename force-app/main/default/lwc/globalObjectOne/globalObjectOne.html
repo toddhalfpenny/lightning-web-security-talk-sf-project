@@ -1,12 +1,15 @@
 <template>
-    <lightning-card title="Global Object One" icon-name="standard:system_and_global_variable">
+    <lightning-card title="Global Object One" icon-name="standard:system_and_global_variable" lwc:ref="gObject1" >
 		<div slot="actions">
 			<lightning-button label="Start Video" class="slds-m-left_xx-small" onclick={initCamera}></lightning-button>
 			<lightning-button label="Stop Video" class="slds-m-left_xx-small" onclick={stopCamera}></lightning-button>
 			<lightning-button label="Capture Image" class="slds-m-left_xx-small" onclick={captureImage}></lightning-button>
+			<lightning-button label="Screen cap" class="slds-m-left_xx-small" onclick={screenCapture}></lightning-button>
+			<lightning-button label="PiP" class="slds-m-left_xx-small" onclick={picInPic}></lightning-button>
+			<lightning-button label="S2T" class="slds-m-left_xx-small" onclick={captureAudio}></lightning-button>
 		</div>
 		<div class="slds-grid slds-gutters">
-			<div class="slds-col slds-size_1-of-2">
+			<div class="slds-col slds-size_1-of-2"  lwc:ref="mediaContainer" >
 				<video class="videoElement" autoplay></video>
 				<canvas class="slds-hide canvas"></canvas>
 			</div>
